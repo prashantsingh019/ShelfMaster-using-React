@@ -1,0 +1,46 @@
+nav ul li{
+    cursor: pointer;
+}
+aside .nested-ul li{
+    border: 1px solid white;
+    padding: 5px 50px 5px 2.5px;
+    margin: 2px;
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: 0px 0px 1px grey;
+    border-radius: 5px;
+}
+aside h2{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+aside{
+    color: white;
+}
+
+.book-section{
+    box-shadow: 0px 0px 5px grey;
+}
+aside .nested-ul li:hover{
+    background-color: rgb(103, 57, 240);
+}
+.card{
+    border: 2px solid rgb(103, 57, 240);
+}
+.addBookForm{
+        /* width: 10%; */
+        background-color: rgb(165, 165, 165);
+        margin: 0em 33em -6em -15em;
+        padding: 1em 1.2em;
+        border-radius: 0.5em;
+        text-align: center;
+}
+.addBookForm input{
+    margin: 5px;
+    color: black;
+    padding: .2em .5em;
+    border-radius: .2em;
+    outline: none; 
+    font-size: 1rem;
+}

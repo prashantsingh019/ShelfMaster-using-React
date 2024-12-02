@@ -1,25 +1,14 @@
 import React from "react";
-
+import {category} from '../utils/bookList';
 function SideBar() {
   return (
-    <aside className="bg-violet-400">
-      <ul>
-        <li>Categories</li>
-        <ul className="nested-ul">
-          <li>Best seller</li>
-          <li>Fiction</li>
-          <li>Non-Fiction</li>
-          <li>Novel</li>
-          <li>Sci-Fi</li>
-          <li>Spirtual</li>
-          <li>Biography</li>
-          <li>Auto-Biography</li>
-          <li>Self-Help</li>
-          <li>Adventure</li>
-          <li>Horror</li>
-          <li>History</li>
-          <li>Business/Economics</li>
-        </ul>
+    <aside className="bg-violet-400 pt-2">
+      <h2>Categories</h2>
+      <ul className="nested-ul">
+        {category.map((listItem) => {
+           return <li>{listItem}</li>
+        })}
+
       </ul>
     </aside>
   );
