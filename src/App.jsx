@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import store from "./redux/store";
 import "./App.css";
+import { Outlet } from "react-router";
+
 function App() {
   function handleChange(e) {
     console.log(e.target.value.toLowerCase());
@@ -17,7 +19,7 @@ function App() {
         <div className="flex items-center justify-between">
           <h1 className="py-2 text-2xl ml-1">Welcome Dear User</h1>
 
-          <div className="search-box pr-4">
+          {/* <div className="search-box pr-4">
             <input
               type="search"
               name=""
@@ -30,12 +32,12 @@ function App() {
             >
               Search
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="appBody flex justify-between">
           <SideBar />
 
-          <Home />
+          <Outlet />
         </div>
       </div>
     </Provider>
