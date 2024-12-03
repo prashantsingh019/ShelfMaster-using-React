@@ -1,5 +1,5 @@
 import Bookcard from "./Bookcard.JSX";
-import { useState,useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 function Home({ searchText, data }) {
