@@ -9,11 +9,14 @@ const bookSlice = createSlice({
         addBook:(state,action)=>{
             state.book.push(action.payload)
             console.log(action);
+        },
+        filterBook:(state,action)=>{
+            state.book = action.payload;
         }
     }
 })
 
 
 
-export const{addBook} = bookSlice.actions;
+export const{addBook, filterBook} = bookSlice.actions;
 export default bookSlice.reducer;
