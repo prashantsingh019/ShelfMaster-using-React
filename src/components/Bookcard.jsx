@@ -1,7 +1,4 @@
-
-function Bookcard({data}) {
- console.log(data);
- 
+function Bookcard({ data }) {
   return (
     <div className="card flex flex-col gap-2 py-2 px-5 bg-[#FFE5B4] w-[22%] rounded-lg justify-between shadow-lg">
       <div className="img_container flex justify-center">
@@ -14,21 +11,20 @@ function Bookcard({data}) {
         />
       </div>
       <div className="text-sect">
-        <div className="title text-xl font-bold">
-           {data["title"]}
-        </div>
+        <div className="title text-xl font-bold">{data["title"]}</div>
 
         <div className="author"> {data["author"]}</div>
         <div className="flex justify-end">
-          <button className="self-end bg-violet-600 p-1 rounded-md">view more</button>
-          
+          <button className="self-end bg-violet-600 p-1 rounded-md">
+            view more
+          </button>
         </div>
       </div>
     </div>
   );
 }
 
-export default  Bookcard;
+export default Bookcard;
 
 // "author": "Hans Christian Andersen",
 // "country": "Denmark",
