@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 function Bookcard({ data }) {
   return (
     <div className="card flex flex-col gap-2 py-2 px-5 bg-[#FFE5B4] w-[22%] rounded-lg justify-between shadow-lg">
@@ -15,8 +16,9 @@ function Bookcard({ data }) {
 
         <div className="author"> {data["author"]}</div>
         <div className="flex justify-end">
-          <button className="self-end bg-violet-600 p-1 rounded-md">
-            view more
+          <button className="self-end bg-violet-600 p-1 rounded-md text-white">
+            <Link to={`books/${data.id}`}>view details</Link>
+           
           </button>
         </div>
       </div>
