@@ -36,15 +36,15 @@ function Header() {
       <div className="nav-links flex items-center">
         <ul className="navbar p-2 m-0 flex gap-3 text-xl items-center">
           <li>
-            {/* <Link to="/" class="nav-link"> */}
+            <Link to="/" class="nav-link">
             Home
-            {/* </Link> */}
+            </Link>
           </li>
 
           <li>
-            {/* <Link to="/browse-book" class="nav-link"> */}
+            <Link to="/browse+book+page" class="nav-link">
             Browse Books
-            {/* </Link> */}
+            </Link>
           </li>
 
           <li>
