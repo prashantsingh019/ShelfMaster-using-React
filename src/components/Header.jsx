@@ -1,6 +1,11 @@
 import { Link } from "react-router";
 import { useState } from "react";
+import { addBook } from "../redux/bookSlice";
+import { useDispatch } from "react-redux";
+import Form from "./Form";
+
 function Header() {
+  const dispatch = useDispatch();
   const [showForm, setShowForm] = useState(false);
   const [bookName, setBookName] = useState("");
   const [authorName, setAuthorName] = useState("");
@@ -10,14 +15,16 @@ function Header() {
     setShowForm((prev) => !prev);
   };
   const collectData = () => {
+    
     if(bookName == '' || authorName == '' || category == ''){
       alert('please fill required details then submit')
     }else{
       let addedBook = {
-        name:bookName,
-        url:coverUrl,
+        title:bookName,
+        imageLink:coverUrl,
         author:authorName,
         category:category
+
       }
       console.log(addedBook);
       
@@ -27,6 +34,7 @@ function Header() {
       setcategoryName('')
       setShowForm(false);
       alert('New book added succesfully');
+      dispatch(addBook({addedBook}))
     }
     };
   return (
@@ -36,13 +44,13 @@ function Header() {
       <div className="nav-links flex items-center">
         <ul className="navbar p-2 m-0 flex gap-3 text-xl items-center">
           <li>
-            <Link to="/" class="nav-link">
+            <Link to="/" className="nav-link">
             Home
             </Link>
           </li>
 
           <li>
-            <Link to="/browse+book+page" class="nav-link">
+            <Link to="/browse+book+page" className="nav-link">
             Browse Books
             </Link>
           </li>
@@ -54,58 +62,7 @@ function Header() {
             >
               {showForm ? "hide form" : "Add+ Book"}
             </button>
-            {showForm && (
-              <div className="addBookForm absolute">
-                <h4>Add Book Form</h4>
-                <div className="form-controls">
-                  <input
-                    type="text"
-                    placeholder="paste cover url here"
-                    id="category"
-                    value={coverUrl}
-                    onChange={(e) => setCoverUrl(e.target.value)}
-                  />
-                </div>
-                <div className="form-controls">
-
-                  <input
-                    type="text"
-                    placeholder="enter book name"
-                    id="bookName"
-                    value={bookName}
-                    onChange={(e) => setBookName(e.target.value)}
-                  />
-                </div>
-                <div className="form-controls">
-                  <input
-                    type="text"
-                    placeholder="enter author name"
-                    id="authorName"
-                    value={authorName}
-                    onChange={(e) => setAuthorName(e.target.value)}
-                  />
-                </div>
-
-                <div className="form-controls">
-                  <input
-                    type="text"
-                    placeholder="enter category for this book"
-                    id="category"
-                    value={category}
-                    onChange={(e) => setcategoryName(e.target.value)}
-                  />
-                </div>
-               
-                <div className="form-controls">
-                  <button
-                    className="bg-yellow-400 px-2 py-1 rounded-lg"
-                    onClick={collectData}
-                  >
-                    Add+ Book
-                  </button>
-                </div>
-              </div>
-            )}
+            {showForm && <Form fn={setShowForm}/>}
           </li>
         </ul>
       </div>

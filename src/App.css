@@ -36,11 +36,29 @@ aside .nested-ul li:hover{
         border-radius: 0.5em;
         text-align: center;
 }
-.addBookForm input{
+.form-controls input{
     margin: 5px;
     color: black;
     padding: .2em .5em;
     border-radius: .2em;
     outline: none; 
     font-size: 1rem;
+    width: 20rem;
+    
+}
+.form-controls input[type="submit"]{
+    background-color: brown;
+    margin-bottom: 10px;
+    color:white;
+    cursor: pointer;
+}
+.form-controls input[type="submit"]:hover{
+    background-color: rgb(245, 91, 91);
+    
+}
+.form-controls input[type="submit"]:active{
+    background-color: rgb(32, 167, 182);
+}
+.side-bar-li{
+    width: 15vw;
 }

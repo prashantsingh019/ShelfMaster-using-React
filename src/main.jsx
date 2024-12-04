@@ -7,6 +7,7 @@ import Home from './components/Home.jsx';
 import BrowseBook from './components/BrowseBook.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 import BookDetails from './components/BookDetails.jsx';
+import Category from './components/Category.jsx';
 const routes = createBrowserRouter([
   {
     path:'',
@@ -22,6 +23,17 @@ const routes = createBrowserRouter([
       },
       {
         path:'/books/:id',
+        element:<BookDetails />
+      },
+      {
+       path:'/browse+book+page/books/:id',
+       element:<BookDetails />
+      },
+      {
+       path:'/category/:name',
+       element:<Category/>
+      },{
+        path:'/category/',
         element:<BookDetails />
       }
       

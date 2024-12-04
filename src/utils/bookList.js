@@ -13,17 +13,17 @@ export const books_data = [
     category: "Fairy Tales",
   },
   {
-    author: "Dante Alighieri",
-    country: "Italy",
+    author   : "Dante Alighieri",
+    country  : "Italy",
     imageLink: "images/the-divine-comedy.jpg",
-    language: "Italian",
-    link: "https://en.wikipedia.org/wiki/Divine_Comedy\n",
-    pages: 928,
-    title: "The Divine Comedy",
-    year: 1315,
-    id: 3,
+    language : "Italian",
+    link     : "https://en.wikipedia.org/wiki/Divine_Comedy\n",
+    pages    : 928,
+    title    : "The Divine Comedy",
+    year     : 1315,
+    id       : 3,
     isPopular: false,
-    category: "Epic Poetry",
+    category : "Epic Poetry",
   },
   {
     author: "Bratt Wiliams",
@@ -456,41 +456,29 @@ export const books_data = [
   },
 ];
 export const category = [
-  "Magical Realism",
   "Romance",
-  "Tragedy/Philosophy",
-  "Satire",
-  "Historical Fiction",
-  "Regional Fiction",
-  "Psychological Fiction",
+
   "Adventure",
-  "Epic Poetry",
+
   "Drama",
-  "Modernist Literature",
-  "Surrealism",
-  "Existentialism",
-  "Literary Fiction",
+
   "Poetry",
-  "Fairy Tales",
-  "Epic Poetry",
-  "Religious Text",
-  "Folk Tales",
+
   "Saga",
   "Romance",
   "Realism",
   "Modernist",
-  "Collection of Stories",
+
   "Fiction",
-  "Gothic Fiction",
-  "Philosophical Fiction",
+
   "Poetry",
   "Modernist",
   "Novel",
   "Poetry",
-  "Short Stories",
+
   "Novella",
   "Adventure",
-  "Historical Fiction",
+  
   "Tragedy",
   "Novella",
   "Adventure",
@@ -504,5 +492,5 @@ export const category = [
   "Modernism",
   "Historical Fiction",
   "Romantic Fiction",
-  "Historical Fiction",
+  
 ];

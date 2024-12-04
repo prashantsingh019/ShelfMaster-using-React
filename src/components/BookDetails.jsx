@@ -7,7 +7,7 @@ function BookDetails() {
   const params = useParams();
   const data = useSelector((state) => state.books.book);
   const selectedBook = data.filter((book) => book.id == params.id);
-  console.log();
+  
   
   return (
     <div className="flex-1 p-5">

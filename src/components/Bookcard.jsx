@@ -28,14 +28,4 @@ function Bookcard({ data }) {
 
 export default Bookcard;
 
-// "author": "Hans Christian Andersen",
-// "country": "Denmark",
-// "imageLink": "images/fairy-tales.jpg",
-// "language": "Danish",
-// "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
-// "pages": 784,
-// "title": "Fairy tales",
-// "year": 1836,
-// "id": 2,
-// "isPopular": false,
-// "category": "Fairy Tales"
+
