@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Home from './components/Home.jsx';
 import BrowseBook from './components/BrowseBook.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
+import BookDetails from './components/BookDetails.jsx';
 const routes = createBrowserRouter([
   {
     path:'',
@@ -19,6 +20,10 @@ const routes = createBrowserRouter([
         path:'/browse+book+page',
         element:<BrowseBook/>
       },
+      {
+        path:'/books/:id',
+        element:<BookDetails />
+      }
       
     ],
     errorElement:<ErrorPage/>
