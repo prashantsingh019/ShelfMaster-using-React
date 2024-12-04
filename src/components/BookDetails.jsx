@@ -37,6 +37,11 @@ function BookDetails() {
           Back to Browse
         </Link>
       </button>
+      <button className="text-xl bg-gray-500 p-1 rounded text-white mt-2">
+       <a href={`${selectedBook[0].link}`}>
+          Read More using wikipedia
+        </a>
+      </button>
       </div>
       </div>
     
