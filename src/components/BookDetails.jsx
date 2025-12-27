@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faLink,faFile,faHouse } from '@fortawesome/free-solid-svg-icons'
+import {faHouse } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from "react-redux";
 
 function BookDetails() {
